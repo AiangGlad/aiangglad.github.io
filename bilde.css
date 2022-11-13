@@ -282,7 +282,14 @@ main > img{
 
 /* --------------------------------------------- */
 
+
 @media(max-width:1440px){
+    
+
+    .tekst-tb{
+        font-size:30px;
+    }
+
     .tekstboks4{
         top:1225%;
     }

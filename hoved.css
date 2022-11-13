@@ -67,7 +67,7 @@ nav > a:hover::before{
     width:50px;
     height:6px;
     margin:12px auto;
-    -webkit-transition: all 0,3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     background-color:white;
     border-radius:10px;
