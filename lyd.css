@@ -1,0 +1,689 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #562499;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    background-color:#562499;
+}
+
+header > a > img{
+    width:230px;
+    margin-left:35px;
+    padding:10px 0px;
+    filter:invert(1);
+}
+
+nav{
+    font-family: 'Inter', sans-serif;
+    font-size:35px;
+    margin: auto 30px;
+}
+
+
+
+nav > a{
+    margin: 0px 20px;
+    color:white;
+    font-weight: bold;
+    text-decoration: none;
+    position:relative;
+}
+
+nav > a::before{
+    position:absolute;
+    content:"";
+    background-color:white;
+    height:4px;
+    width:0%;
+    bottom:0;
+    transition-property:width;
+    transition-duration:250ms;
+}
+
+nav > a:hover::before{
+    width:100%;
+}
+
+
+nav > #underline::before{
+    width:100%;
+}
+
+.hamburger{
+    display:none;
+    cursor:pointer;
+    margin:auto 30px;
+}
+
+.bar{
+    display:block;
+    width:50px;
+    height:6px;
+    margin:12px auto;
+    -webkit-transition: all 0,3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color:white;
+    border-radius:10px;
+
+}
+
+
+
+
+
+
+
+
+main{
+    display:flex;
+    background-color:#9d5fee;
+    align-items:center;
+    justify-content:space-around;
+}
+
+main > article{
+    width:40%;
+}
+
+main > article > h1{
+    color:white;
+    font-size:60px;
+    font-family: 'Inter', sans-serif;
+    margin-bottom:9px;
+
+}
+
+main > article > p{
+    color:white;
+    font-family: 'Inter', sans-serif;
+    line-height:2.2;
+    font-size:18px;
+}
+
+
+main > img{
+    height:340px;
+    margin:40px 0px;
+}
+
+#startoverskrift{
+    color:white;
+    font-size:40px;
+    font-family: 'Inter', sans-serif;
+    text-align:center;
+    margin-top:35px;
+}
+
+.digitaliseringavlyd{
+    display:flex;
+    justify-content:space-evenly;
+    align-items: center;
+    width:80%;
+    margin: 0px auto;
+    margin-top:40px;
+   /*  overflow:hidden; */
+}
+
+.digitaliseringavlyd > img{
+    width:40%;
+    border:solid 2px #9d5fee;
+    border-radius: 15px;;
+    box-shadow: 0 10px 10px 0 #2b114c;
+}
+
+.digitaliseringavlyd > .vannrett{
+    display:none;
+}
+
+.digitaliseringavlyd > .lydinfo {
+    width:45%;
+}
+
+.digitaliseringavlyd >.lydinfo > p{
+    color:white;
+    font-family: 'Inter', sans-serif;
+    line-height:2.2;
+    font-size:18px;
+    margin-left:20px;
+}
+
+
+
+
+/* Musikkspiller */
+.sang{
+    width:100%;
+    height:100%;
+}
+
+
+.music-player{
+
+    margin:50px 10px;
+    width:350px;
+    height:160px;
+    border-radius:20px;
+    background:#9d5fee;
+    box-shadow: 0 10px 10px 0 #2b114c;
+    padding:20px;
+    overflow:hidden;
+}
+
+.tittel{
+    color:white;
+    font-size: 30px;
+    text-align:center;
+    font-family: 'Inter', sans-serif;
+}
+
+.slider{
+    width:100%;
+    position:relative;
+}
+
+.seek-bar{
+    -webkit-appearance: none;
+    width:100%;
+    height:5px;
+    border-radius:10px;
+    background:#562499;
+    cursor:pointer;
+    overflow:hidden;
+}
+
+.seek-bar::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width:0px;
+    height:8px;
+    background:white;
+    box-shadow:-400px 0 0 400px #ffffff;
+}
+
+.current-time, .song-duration{
+    font-size:14px;
+    color:white;
+}
+
+.tid{
+    display:flex;
+    justify-content:space-between;
+    font-family: 'Inter', sans-serif;
+}
+
+.controls{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:auto;
+    margin-top:20px;
+}
+
+.play-btn{
+    position:relative;
+    bottom:25px;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:white;
+    cursor:pointer;
+    border:none;
+}
+
+.play-btn span{
+    position:absolute;
+    top:50%;
+    left:25%;
+    transform:translateY(-50%);
+    width:10px;
+    height:30px;
+    border-radius:2px;
+    background:#9d5fee;
+    transition: .5s;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.play-btn span:nth-child(2){
+    left:55%;
+    transform-origin:center;
+}
+
+.play-btn.pause span:nth-child(2){
+    transform:translate(-50%) scaleY(0)}
+
+
+.play-btn.pause span:nth-child(1){
+    width:35%;
+    left:53%;
+    transform: translate(-50%, -50%);
+    border-radius:0;
+    clip-path: polygon(0 0, 100% 50%, 100% 50%, 0% 100%);
+}
+
+
+.play-btn.pause{
+    animation:pulse 2s linear infinite;
+}
+
+@keyframes pulse{
+    0%{
+        box-shadow:0;
+    }
+
+    50%{
+        box-shadow: 0 0 0 5px #c19eef;
+    }
+
+    100%{
+        box-shadow: 0 0 5 5px white;
+    }
+}
+
+
+.eksempelsang{
+    width:65%;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    margin:0px auto;
+}
+
+.sampleinfo{
+    color:white;
+    font-family: 'Inter', sans-serif;
+    line-height:2.2;
+    font-size:18px;
+    margin-left:15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Bildelinje */
+
+.sampleanalyse{
+    min-height:100vh;
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.minilinje{
+    width:10px;
+    height:3px;
+    background-color: white;
+    margin:0px auto;
+    position:relative;
+    left:1.5px;
+    border-radius:10px;
+    
+}
+
+.bildelinje{
+    width:80%;
+    text-align:center;
+    position:relative;
+}
+
+.bildelinje > ul > li > .bildeinfo > img{
+    width:100%;
+}
+
+.bildelinje > ul{
+    list-style:none;
+}
+
+.bildelinje > ul > li{
+    padding:20px;
+    background-color:#8044ce;
+    border-radius: 15px;
+    margin-bottom:20px; 
+    width:50%;
+    box-shadow: 0 10px 10px 0 #2b114c;
+    color:white;
+    line-height: 1.7;
+    font-size:17px;
+    font-family: 'Inter', sans-serif;
+}
+
+
+.bildeinfo > h1{
+    font-size:40px;
+}
+
+.bildelinje::before {
+    content:'';
+    position:absolute;
+    height:100%;
+    width:3px;
+    background-color: white;
+}
+
+
+.bildelinje ul li:nth-child(even) {
+    float:right;
+    clear:left;
+    position:relative;
+    left:20px;
+}
+
+.bildelinje ul li:nth-child(odd) {
+    float:left;
+    clear:right;    
+    position:relative;
+    right:20px;
+}
+
+
+
+.box{
+    display:flex;
+    align-items:center;
+    justify-content: space-around;
+    margin:30px auto;
+    border: solid 3px #9d5fee;
+    border-radius:25px;
+    background-color:#a86bf7;
+    transition:ease-in 0.3s;
+    color:white;
+    font-size:15px;
+    line-height:2;
+    font-family: 'Inter', sans-serif;
+    cursor:pointer;
+    width:60%;
+}
+
+
+.box:hover{
+    background-color:#c298f9;
+}
+
+.box > img {
+    width:250px;
+    height:250px;
+    margin:0px 10px;
+    
+}
+
+
+
+.info{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width:65%
+}
+
+.navbilde{
+    text-decoration:none;
+    width:45%;
+    height:100%;
+    padding-bottom:50px;
+    padding-top:20px;
+}
+
+.navh1{
+    text-align:center;
+    font-family: 'Inter', sans-serif;
+    color:white;
+    font-size:35px;
+    margin-top:20px;
+}
+
+
+@media(max-width:1280px){
+    main > article > h1{
+        font-size:50px;
+    }
+
+    .digitaliseringavlyd > img{
+        display:none;
+    }
+
+    .digitaliseringavlyd > .vannrett{
+        display:block;
+        width:90%;
+    }
+
+    .digitaliseringavlyd{
+        flex-direction:column;  
+    }
+
+    .digitaliseringavlyd > .lydinfo {
+        width:90%;
+        margin-bottom:40px;
+    }   
+
+    .eksempelsang{
+        width:80%;
+    }
+
+
+}
+
+
+@media(max-width:1024px){
+
+    main > article > h1{
+        font-size:40px;
+    }
+
+    .eksempelsang{
+        width:90%;
+    }
+
+
+
+    .bildelinje::before {
+        content:'';
+        position:absolute;
+        left:10px;
+        border-radius:10px;
+    }
+
+
+    .bildelinje ul li:nth-child(even) {
+        position:relative;
+        left:5%;
+    }
+    
+    .bildelinje ul li:nth-child(odd) {   
+        position:relative;
+        left:5%;
+    }
+    
+    
+    .bildelinje > ul > li{ 
+        width:100%;
+    }
+
+    .minilinje{
+        display:none;
+        
+    }
+
+
+    .box{
+        width:70%;
+    }
+    
+}
+
+
+@media(max-width:820px){
+    .bildelinje::before {
+        content:'';
+        height:0;
+        width:0;
+    }
+
+    .bildelinje ul li:nth-child(even) {
+        position:static;
+    }
+    
+    .bildelinje ul li:nth-child(odd) {   
+        position:static;
+    }
+
+    main > article > h1{
+        font-size:30px;
+    }
+
+    main > article > p{
+        font-size:17px;
+    }
+
+    main > img {
+        width:35%;
+    }
+
+    .eksempelsang{
+        flex-direction:column-reverse;
+        width:90%;
+    }
+
+    .eksempelsang > .sang > .music-player{
+        margin: 30px auto;
+    }
+
+    .eksempelsang > .sampleinfo{
+        margin-top:30px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:768px){
+    .hamburger{
+        display:block;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity:0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform:translateY(18px) rotate(45deg);
+    }
+
+    
+    .hamburger.active .bar:nth-child(3){
+        transform:translateY(-18px) rotate(-45deg);
+    }
+
+    nav{
+        display:flex;
+        position:absolute;
+        left:-100%;
+        top:100px;
+        gap:0;
+        flex-direction:column;
+        background-color:#562499;
+        width:100%;
+        text-align: center;
+        transition:0.2s;
+        margin:0;
+    }
+
+    nav > a {
+        margin:0px;
+        border-top: solid;
+        border-width:2px;
+        border-color:white;
+        padding-top:30px;
+        padding-bottom:30px;
+    }
+
+    nav.active{
+        left:0;
+    }
+
+    nav a:nth-child(3){
+        border-bottom: solid;
+        border-width:2px;
+        border-color:white;
+        padding-bottom:30px;
+        margin:0;
+    }
+
+    nav > a::before{
+        height:0;
+    }
+
+    .box{
+        width:95%;
+    }
+}
+
+@media(max-width:650px){
+    
+    main > img {
+        display:none;
+    }
+
+    main > article{
+        width:80%;
+        text-align: center;
+        margin: 20px auto;
+    }
+
+    .digitaliseringavlyd{
+        width:90%;
+    }
+
+    .digitaliseringavlyd > .lydinfo{
+        text-align: center;
+    }
+
+    .sampleinfo{
+        text-align: center;
+    }
+
+    .box{
+        flex-direction: column-reverse;
+    }
+
+    .box > .info{
+        width:85%;
+    }
+
+    .box > img{
+        width:100%;
+        height: fit-content;
+    }
+
+    
+}
+
+
+
+

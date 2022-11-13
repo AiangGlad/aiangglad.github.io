@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digitalisering av lyd</title>
+    <link rel="stylesheet" href="lyd.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="index.html">
+        <img src="Bilder/LOOOOGOOOOOO.png" alt="Bilde av logoen">
+        </a>
+        <nav>
+            <a id="underline" href="">Lyd</a>
+            <a href="bilde.html">Bilder</a>
+            <a href="kilder.html">Kilder</a>
+        </nav>
+
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+    </header>
+
+    
+
+    <main>
+         <article>
+            <h1>Digitalisering av lyd</h1>
+            <p>Det første lydopptaket ble tatt av Thomas Edison. Han fant opp fonografen og spilte inn lyd analogt på en aluminiumsrull. Dette kunne spilles én gang.  I dag kan man spille digitalt og sende det rundt hele verden slik at alle kan høre den.</p>
+        </article>
+
+        <img src="Bilder/brur.png" alt="bilde av en lydbølge">
+
+    </main>
+
+
+    <h1 id="startoverskrift">Hvordan lyden digitaliseres</h1>
+    <article class="digitaliseringavlyd">
+        
+        <img src="Bilder/808Bølge.png" alt="Bilde av en lydbølge">
+
+        <div class="lydinfo">
+        <p>Lydsignalet fra et analogt lydopptak er endringer i spenning over tid. Vi kan framstille lydsignalet grafisk ved å sette tiden langs x-aksen og spenningen langs y-aksen. Når lyden prosesseres, vil datamaskinen sette punkter jevnt utover x-aksen og måle spenningen fra y-aksen for hvert punkt. Hvor mange punkter som settes inn avgjør kvaliteten på lydopptaket.</p>
+        <br><br>
+        <p>Hvor ofte hvert punkt settes kalles for samplefrekvensen, som vi kan tenke oss er nøyaktigheten av x-verdiene. Hvor mange punkter det er langs y-asken oppgir vi i bit. Standard samplingsfrekvens er på 44,1 kHz som er 44 100 målinger per sekund.
+            </p>
+        </div>    
+
+        <img class="vannrett" src="Bilder/808Bølgevannrett.png" alt="Bilde av en lydbølge">
+    </article>
+
+
+    <article class="eksempelsang">
+
+    <div class="sang">
+
+        <audio id="audio" src="music/Song 1.mp3"></audio>
+        
+        <div class="music-player">
+            <h1 class="tittel">Eksempel sample</h1>
+
+            <div class="slider">
+                <input type="range" value="0" class="seek-bar">
+
+                <div class="tid">
+                <span class="current-time">00:00</span>
+                <span class="song-duration">00:27</span>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button class="play-btn pause">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+        <div class="sampleinfo">
+        <p>For å gjøre dette fenoment enklere å forstå har jeg laget en sample hvor vi skal analysere bølgeformen. Under kan du se bilder av bølgeformen til samplen i ulike forstørrelsenivåer.
+        </p>
+        </div>
+    </article>
+
+    <div class="minilinje"></div>
+    <div class="sampleanalyse">
+        <div class="bildelinje">
+            <ul>
+                <li>
+                    <div class="bildeinfo">
+                        <h1>Nivå 1</h1>
+                        <img src="Bilder/Samplezoom1.png" alt="bilde av bølgeformen til samplen">
+                        <p>Dette er et bilde av bølgeformen til hele samplen. Med dette bildet er det lett å se forskjell på amplitude  men ikke frekvens fordi bølgene sitter veldig tett intill hverandre. Dersom vi fokuserer på ett mindre tidsintervall vil det bli lettere å se de forskjellige frekvensene.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="bildeinfo">
+                        <h1>Nivå 2</h1>
+                        <img src="Bilder/Samplezoom2.png" alt="Bilde av en forstørret del av bølgeformen til samplen">
+                        <p>Her kan vi se forskjeller på frekvensene. Hvis vi annalyserer bølgelengdene kan vi se at lydbøgen på høyre side av bildet er bassen, fordi frekvensen er lavere relativt til de andre bølgene. På venstre side av bildet kan vi se en liten lydbølge som ligner på en pigge. Dette er knipset. Vi skal se nærmere på knipset. </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="bildeinfo">
+                        <h1>Nivå 3</h1>
+                        <img src="Bilder/Samplezoom3.png" alt="Bilde av bølgeformen til knipset">
+                        <p>Siden knipset har høyere frekvens enn de andre insutrumentene betyr det at det vil være færre målinger for hver av bølgelengdene. Dette gjør det enklere å se målingene. Vi kan klart se hvor hver av målingene er plassert og hvordan y-verdiene endres for hver av x-verdiene.  Grunnen til at vi ser to bølger er fordi samplen er stero, som betyr at lydfilen har to signaler. Dersom samplen hadde vært i mono hadde vi bare sett ett  lydsignal.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="bildeinfo">
+                        <h1>Nivå 4</h1>
+                        <img src="Bilder/Samplezoomfinal.png" alt="Bilde av punktene som lager bølgeformen">
+                        <p>Nå kan vi se klart se punktene som danner lydbølgen. Siden samplingsfrekvensen er på 44 100Hz og at det er 46 målinger i dette bildeutklippet, betyr det at tidsintervallet på dette bildet tilsvarer omtrent ett millisekund, eller en tusendel av et sekund. 
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="minilinje"></div>
+
+    <h1 class="navh1">Les om digitale bilder</h1>
+
+    <a class="navbilde" href="bilde.html">
+        <div class="box">
+            <img  id="digbilde" src="Bilder/digitalebilder.png" alt="Bilde av photoshop logoen">
+    
+            <div class="info">
+            <h1>Digitale bilder</h1>
+    
+            <p>Det første gjenlevende fotografiet i verden ble tatt i 1826. Det var bare svart-hvitt og eksponeringen skal ha vart i åtte timer. I dag, 200 år etterpå, kan vi ta digitale bilder med eksponering på 1/8000 sekund.
+            </p>
+            </div>
+        </div>
+       </a>
+
+    <script src="musicdata.js"></script>
+    <script src="music.js"></script>
+    <script src="hamburger.js"></script>
+</body>
+</html>

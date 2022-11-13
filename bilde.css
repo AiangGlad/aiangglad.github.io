@@ -1,0 +1,516 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: #562499;
+}
+
+/* --------------------------------------------- */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    background-color:#562499;
+}
+header > a > img{
+    width:230px;
+    margin-left:35px;
+    padding:10px 0px;
+    filter:invert(1);
+}
+nav{
+    font-family: 'Inter', sans-serif;
+    font-size:35px;
+    margin: auto 30px;
+}
+nav > a{
+    margin: 0px 20px;
+    color:white;
+    font-weight: bold;
+    text-decoration: none;
+    position:relative;
+}
+nav > a::before{
+    position:absolute;
+    content:"";
+    background-color:white;
+    height:4px;
+    width:0%;
+    bottom:0;
+    transition-property:width;
+    transition-duration:250ms;
+}
+nav > a:hover::before{
+    width:100%;
+}
+nav > #underline::before{
+    width:100%;
+}
+
+
+.hamburger{
+    display:none;
+    cursor:pointer;
+    margin:auto 30px;
+}
+
+.bar{
+    display:block;
+    width:50px;
+    height:6px;
+    margin:12px auto;
+    -webkit-transition: all 0,3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color:white;
+    border-radius:10px;
+
+}
+
+
+/* --------------------------------------------- */
+
+main{
+    display:flex;
+    background-color:#9d5fee;
+    align-items:center;
+    justify-content:space-around;
+}
+main > article{
+    width:40%;
+}
+main > article > h1{
+    color:white;
+    font-size:60px;
+    font-family: 'Inter', sans-serif;
+    margin-bottom:9px;
+
+}
+main > article > p{
+    color:white;
+    font-family: 'Inter', sans-serif;
+    line-height:2.2;
+    font-size:18px;
+}
+main > img{
+    height:340px;
+    margin:40px 0px;
+}
+
+/* --------------------------------------------- */
+
+.intro{
+    height:100vh;
+}
+.intro video{
+    height:100%;
+    width:100%;
+    object-fit:cover;
+}
+
+/* --------------------------------------------- */
+
+.illustrasjon{
+    display:none;
+}
+
+.overskrift-tb{
+    font-size: 60px;
+    margin-bottom: 20px;
+    color:white;
+    font-family: 'Inter', sans-serif;
+
+}
+.tekst-tb{
+    font-size: 40px;
+    color:white;
+    font-family: 'Inter', sans-serif;
+}
+
+.tekstboks1{
+    padding: 30px;
+
+    width:35%;
+    /* height:55vh; */
+    height:fit-content;
+    border: solid 2px #9d5fee;
+    background-color:#562499;
+    font-size: 60px;
+    top:20%;
+    left:3%;
+    border-radius: 10px;
+
+    position:absolute;
+    top:750%
+}
+.tekstboks2{
+    padding: 30px;
+
+    width:35%;
+    /* height:34vh; */
+    height:fit-content;
+    border: solid 2px #9d5fee;
+    background-color:#562499;
+    font-size: 60px;
+    top:20%;
+    left:3%;
+    border-radius: 10px;
+
+    position:absolute;
+    top:950%
+}
+.tekstboks3{
+    padding: 30px;
+
+    width:35%;
+    /* height:83vh; */
+    height:fit-content;
+    border: solid 2px #9d5fee;
+    background-color:#562499;
+    font-size: 60px;
+    /* top:20%; */
+    left:3%;
+    border-radius: 10px;
+
+    position:absolute;
+    top:1140%
+}
+
+.tekstboks4{
+    padding: 30px;
+
+    width:35%;
+   /*  height:160vh; */
+    height:fit-content;
+    border: solid 2px #9d5fee;
+    background-color:#562499;
+    font-size: 60px;
+    left:3%;
+    border-radius: 10px;
+
+    position:absolute;
+    top:1240%;
+}
+
+/* --------------------------------------------- */
+
+
+.bunn{
+    margin:50px auto;
+    color: white;
+    background-color:#562499;
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content:center;
+    width:70%;
+    border: solid 2px #9d5fee;
+    background-color: #9d5fee;
+    border-radius:15px;
+    box-shadow: 0 10px 10px 0 #2b114c;
+}
+
+.bunn > .bunninfo{
+    font-family: 'Inter', sans-serif;
+    line-height: 1.9;
+    margin:10px;
+}
+
+
+.bunn > img{
+    width:400px;
+    margin:10px;
+    border-radius:7px;
+}
+
+.box{
+    display:flex;
+    align-items:center;
+    justify-content: space-around;
+    margin:30px auto;
+    border: solid 3px #9d5fee;
+    border-radius:25px;
+    background-color:#a86bf7;
+    transition:ease-in 0.3s;
+    color:white;
+    font-size:15px;
+    line-height:2;
+    font-family: 'Inter', sans-serif;
+    cursor:pointer;
+    width:60%;
+}
+
+
+.box:hover{
+    background-color:#c298f9;
+}
+
+.box > img {
+    width:250px;
+    height:250px;
+    margin:0px 10px;
+    
+}
+
+
+
+.info{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width:65%
+}
+
+.navbilde{
+    text-decoration:none;
+    width:45%;
+    height:100%;
+    padding-bottom:50px;
+    padding-top:20px;
+}
+
+.navh1{
+    text-align:center;
+    font-family: 'Inter', sans-serif;
+    color:white;
+    font-size:35px;
+    margin-top:20px;
+}
+
+
+
+/* --------------------------------------------- */
+
+
+@media(max-width:1280px){
+
+/*     .tekstboks1{
+        height:61vh;
+    } */
+
+
+    .tekstboks2{
+    
+        width:40%;
+        /* height:38vh; */
+    }
+    .tekstboks3{
+        width:35%;
+       /*  height:105vh; */
+        top:1100%
+    }
+
+    .tekstboks3 > p {
+        font-size:40px;
+    }
+    
+    .tekstboks4{
+        /* height:174vh; */
+        top:1220%;
+    }
+
+    .tekstboks4 > p{
+        font-size:40px;
+    }
+
+    /* ----------------------- */
+
+    .bunn{
+        flex-direction: column;
+    }
+
+    .bunn > img{
+        width:95%;
+    }
+}
+
+@media(max-width:1260px){
+    .intro{
+        display:none;
+
+    }
+
+    .tekstboks1, .tekstboks2, .tekstboks3, .tekstboks4{
+        position:static;
+        margin: 20px auto;
+        width:80%;
+        height:fit-content;
+        background-color: #9d5fee;
+    }
+
+    .tekstboks1 > p{
+        font-size:18px;
+        line-height:1.9;
+    }
+
+    .tekstboks1 > .overskrift-tb{
+        font-size:45px;
+    }
+
+    .tekstboks2 > p{
+        font-size:18px;
+        line-height:1.9;
+    }
+
+    .tekstboks3 > p{
+        font-size:18px;
+        line-height:1.9;
+    }
+
+
+    .tekstboks4 > p{
+        font-size:18px;
+        line-height:1.9;
+    }
+
+    .illustrasjon{
+        display:block;
+        width:80%;
+        margin:0px auto;
+        border-radius:10px;
+    }
+
+    .bunn > img{
+        margin-bottom:20px;
+    }
+
+    .bunn{
+        margin-bottom:100px;
+        width:80%;
+    }
+
+    .bunn > .bunninfo > p{
+        font-size:18px;
+    }
+}
+
+
+@media only screen and (max-width:1024px){
+    main > article > h1{
+        font-size:60px;
+    }
+
+
+
+    .box{
+        width:70%;
+    }
+
+}
+
+@media only screen and (max-width:768px){
+
+    main > article > h1{
+        font-size:35px;
+    }
+
+    .hamburger{
+        display:block;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity:0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform:translateY(18px) rotate(45deg);
+    }
+
+    
+    .hamburger.active .bar:nth-child(3){
+        transform:translateY(-18px) rotate(-45deg);
+    }
+
+    nav{
+        display:flex;
+        position:absolute;
+        left:-100%;
+        top:100px;
+        gap:0;
+        flex-direction:column;
+        background-color:#562499;
+        width:100%;
+        text-align: center;
+        transition:0.2s;
+        margin:0;
+    }
+
+    nav > a {
+        margin:0px;
+        border-top: solid;
+        border-width:2px;
+        border-color:white;
+        padding-top:30px;
+        padding-bottom:30px;
+    }
+
+    nav.active{
+        left:0;
+    }
+
+    nav a:nth-child(3){
+        border-bottom: solid;
+        border-width:2px;
+        border-color:white;
+        padding-bottom:30px;
+        margin:0;
+    }
+
+    nav > a::before{
+        height:0;
+    }
+
+    .box{
+        width:95%;
+    }
+
+}
+
+
+@media(max-width:650px){
+    
+    main > img {
+        display:none;
+    }
+
+    main > article{
+        width:80%;
+        text-align: center;
+        margin: 20px auto;
+    }
+
+    .box{
+        flex-direction: column-reverse;
+    }
+
+    .box > .info{
+        width:85%;
+    }
+
+    .box > img{
+        width:95%;
+        height: fit-content;
+    }
+
+    
+}
+
+
+
+@media only screen and (max-width:480px){
+    .tekstboks1, .tekstboks2, .tekstboks3, .tekstboks4{
+        width:95%;
+    }
+
+    .illustrasjon{
+        width:95%;
+    }
+
+    .bunn{
+        width:95%;
+    }
+}
+
+
+
